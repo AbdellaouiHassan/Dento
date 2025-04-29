@@ -1,0 +1,280 @@
+// browser resetting
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+// mixin elements
+@mixin btn-styling{
+    padding: 0.5rem 2rem;
+    border-radius: 0;
+    background-color: #00AEEf;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+
+@mixin hr-styling{
+    width: 15%;
+    height: 4px;
+    color:#00AEEf;
+    background-color: #00AEEF;
+    opacity: 1;
+}
+
+//nav-bar styling
+.nav__bar{
+    padding: 1rem 15rem;
+    .links a{
+        color: black;
+        font-size: 1.3rem;
+        font-weight: 400;
+        padding: 0 2rem ;
+    }
+    .btn{
+      border-radius: 0;  
+      background-color: #00AEEF;
+      border: 0;
+      transition: 0.5s ease;
+    }
+
+    .btn:hover{
+        scale: (1.1);
+        background-color: #12556d ;
+    }
+}
+
+
+// hero section styling
+.background{
+    background-image: url(/Dento/assets/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 90dvh;
+        line-height: 2;
+        background-color: rgba(15, 15, 151, 0.5);
+        backdrop-filter: blur(5px) brightness(0.7);      
+        h1 {
+            color: white;
+            width: 80%;
+            justify-self: center;
+            font-size: 4rem;
+        }
+
+        p {
+            margin-top: 1rem;
+            width: 70%;
+            justify-self: center;
+            color: #DBDDE3;
+            font-size: 1.2rem;
+            font-weight: 400;  
+        }
+        
+        .btn{
+            margin-top: 1rem;
+        }
+
+        .btn-primary{
+            @include btn-styling();
+            margin-right: 1rem ;
+        }
+
+        .btn-primary:hover{
+            scale: (1.1);
+            background-color: #12556d;
+            border: 0;
+        }
+
+        .btn-secondary{
+            @include btn-styling();
+            color: #05A2E0;
+            background-color: transparent;
+            border: 2px solid #05A2E0
+        }
+        
+        .btn-secondary:hover{
+            border: 0;
+            scale: (1.1);
+            background-color: #12556d;
+        }
+    }
+}
+
+//about us section styling
+
+.aboutUs .container{
+    padding: 5rem 15rem;
+    .aboutUsTop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+        .topLeft img{
+            width: 100%;
+        }
+        .topRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            hr{
+                @include hr-styling();
+            }
+            .sec-content{
+                 margin-top: 1rem;
+                 color: gray;
+                 font-size: 1rem;
+                 font-weight: 400;  
+             }
+            
+            .rightExperience, .rightModern, .rightFriendly{
+                margin-top: 1rem;
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 550;
+                }
+            }
+            .progress{
+                border-radius: 0 ;
+                height: 10px;
+                .prgress-bar{
+                    background-color: #00AEEF;
+                }
+            }
+        }  
+    }
+    .aboutUsHr{
+        margin-top: 2.5rem;
+        height: 1px;
+        background-color: gray;
+    }
+    .aboutUsBottom{
+        height: 30dvh;
+        align-items: center;
+        gap: 7rem;
+        justify-content: center;
+        text-align: center;
+        i{
+            color: #00AEEF;
+            background-color: white;
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+        }
+        h1{
+            margin-bottom: 1rem;
+            font-weight: 550;
+        }
+        h4{
+            font-size: 1rem;
+            font-weight: 550;
+        }
+        }
+}
+
+// our services styling
+.ourServicesBG{
+    background: url(/Dento/assets/images/osbg.jpg) no-repeat;
+    background-size: cover;
+    .container{
+        display: flex;
+        justify-content: center; 
+        padding: 5rem 14rem;
+
+    }
+    .ourServices{
+        background-color: rgba(15, 15, 151, 0.5);
+        backdrop-filter: blur(5px) brightness(0.7);
+        .ourServicesRight{
+            h1{
+                color: white;
+                font-weight: 500;
+            }
+            hr{
+                @include hr-styling();
+            }
+            .rightIcons{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 3rem 2rem;
+                // grid-template-rows: 1fr 1fr;
+                p{
+                    color: rgb(218, 214, 214);
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                }
+                .icon{
+                    width: 10rem;
+                    img{
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+        .ourServicesLeft{
+            img{
+                width: 30rem;
+                height: 20rem;
+            }
+        }
+    }
+}
+
+.pricing  .container{
+    padding: 5rem 10rem;
+    .pricingTop{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        hr{
+            @include hr-styling();
+            align-self: center;
+            width: 5%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .pricingTable{
+        thead{
+            border: 0; 
+            color: white;
+            tr{
+                th{
+                    border: 6px solid white;
+                    padding: 0.7rem 2rem;
+                } 
+            }
+           
+        }
+
+        tbody{
+            border: 0;
+            color: #838383;
+            tr{
+                td{
+                    border: 6px solid white;
+                    padding: 0.7rem 2rem;
+                } 
+            }
+            
+            } 
+    }
+
+    .pricingBtn{
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        button{
+            @include btn-styling();
+            color: white;
+            border: 0;
+            }
+    }
+   
+}
+
