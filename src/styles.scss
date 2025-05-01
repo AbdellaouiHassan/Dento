@@ -10,7 +10,7 @@
     padding: 0.5rem 2rem;
     border-radius: 0;
     background-color: #00AEEf;
-    font-size: 1rem;
+    font-size: clamp(8px, 1rem, 1.5vw);
     transition: 0.5s ease;
 }
 
@@ -24,7 +24,7 @@
 
 //nav-bar styling
 .nav__bar{
-    padding: 1rem 15rem;
+    padding: 2rem 15rem;
     .links a{
         color: black;
         font-size: 1.3rem;
@@ -32,7 +32,9 @@
         padding: 0 2rem ;
     }
     .btn{
+    padding: 0.5rem 0.5rem;
       border-radius: 0;  
+      font-size: clamp(10px, 0.8rem, 1.5vw);
       background-color: #00AEEF;
       border: 0;
       transition: 0.5s ease;
@@ -50,6 +52,7 @@
     background-image: url(/Dento/assets/images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100dvw;
     .hero{
         display: flex;
         align-items: center;
@@ -63,11 +66,11 @@
             color: white;
             width: 80%;
             justify-self: center;
-            font-size: 4rem;
+            font-size: clamp(16px, 4vw, 4rem);
         }
 
         p {
-            margin-top: 1rem;
+            margin-top: clamp(10px, 1vw, 1rem);;
             width: 70%;
             justify-self: center;
             color: #DBDDE3;
@@ -115,6 +118,7 @@
         grid-column-gap: 2rem;
         .topLeft img{
             width: 100%;
+            object-fit: cover;
         }
         .topRight{
             display: flex;
@@ -153,24 +157,31 @@
         background-color: gray;
     }
     .aboutUsBottom{
-        height: 30dvh;
+        margin-top: 2rem;
         align-items: center;
         gap: 7rem;
         justify-content: center;
         text-align: center;
-        i{
-            color: #00AEEF;
-            background-color: white;
-            font-size: 2.6rem;
-            margin-bottom: 1rem;
-        }
-        h1{
-            margin-bottom: 1rem;
-            font-weight: 550;
-        }
-        h4{
-            font-size: 1rem;
-            font-weight: 550;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            i{
+                color: #00AEEF;
+                background-color: white;
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                height: 3rem;
+            }
+            h1{
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+                font-weight: 550;
+            }
+            h4{
+                font-size: 1.5rem;
+                font-weight: 50;
+            }
         }
         }
 }
@@ -204,19 +215,22 @@
                     color: rgb(218, 214, 214);
                     font-weight: 400;
                     font-size: 1.2rem;
+                    margin-bottom: 0;
                 }
                 .icon{
                     width: 10rem;
                     img{
-                        margin-bottom: 0.5rem;
+                        width: auto;
+                        height: 30px;
+                        object-fit: cover;
                     }
                 }
             }
         }
         .ourServicesLeft{
             img{
-                width: 30rem;
-                height: 20rem;
+                max-width: 30rem;
+                max-height: 20rem;
             }
         }
     }
@@ -447,7 +461,7 @@
         .container{
             padding: 5rem 10rem;
             display: grid;
-            grid-template-columns: repeat(4, 25%);
+            grid-template-columns: repeat(4, 1fr);
         }
         .footerLeft{
             display: flex;
@@ -525,3 +539,275 @@
     }
 }
 
+//responsive
+@media (max-width:1400px){
+    .aboutUs{
+        .container{
+            padding: 5rem;
+        }
+    }
+    .ourDentists{
+        .container{
+            padding: 5rem;
+
+        }
+    }
+}
+
+@media (max-width:1312px) {
+    html{
+        font-size: 15px;
+        .nav__bar{
+            padding: 1rem 10rem;
+            .links a {
+                font-size: 1rem;
+
+            }
+        }
+    } 
+    .footerBG{
+        .footer{
+            .container{
+                padding: 2rem 5rem;
+            }
+        }
+    } 
+}
+
+@media (max-width:990px) {
+    html{
+        font-size: 14px;
+        .nav__bar{
+            padding: 1rem 5rem;
+            .links a {
+                font-size: 1rem;
+
+            }
+        }
+        .aboutUs .container{
+            padding: 3rem 7rem;
+            h1{
+                text-align: center;
+            }
+            hr{
+                align-self: center;
+            }
+            .aboutUsTop{
+                grid-template-columns: 1fr;
+                grid-template-rows:  auto auto;
+                grid-gap: 2rem;
+                .topLeft{
+                    order: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        width: 80%;
+                    }
+                }
+                .topRight{
+                    order: 1;
+                    padding-top: 0;
+                    justify-content: center;
+                }
+            }
+            hr{
+                margin:  1rem ;
+                width: 80%;
+                justify-self: center;
+            }
+            .aboutUsBottom{
+                gap: 3rem;
+                div{
+                    i{
+                        font-size: 2.5rem;
+                    }
+                    h1{
+                        margin-bottom: 0.5rem;
+                        font-size: 1.5rem;
+                    }
+                    h4{
+                        font-size: 1rem;
+                    }
+                }
+                }
+        }  
+        .ourServices{
+            .container{
+                flex-direction: column;
+                padding: 4rem 6rem;
+                gap: 4rem;
+                .ourServicesRight{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    hr{
+                        margin-bottom: 2rem;
+                    }
+                }
+                
+                .ourServicesLeft{
+                    display: none;
+                }
+            }
+        }
+        .pricing{
+            .container{
+                padding: 5rem;
+            }
+        }
+        .bookAnApointmentBG{
+            .bookAnApointment{
+                .container{
+                    .bookAnApTop{
+                        flex-direction: column;
+                        align-items: center;
+                        .bookTopLeft{
+                            input{
+                                width: 40rem;
+                             }
+                        }  
+                        .bookTopRight{
+                            input{
+                                width: 40rem;
+                             }
+                        }  
+                    }
+                    .bookAnApBottom{
+                        textarea{
+                            width: 40rem; 
+
+                        }
+                    }
+                }
+            }
+        }
+        .ourDentists{
+            .container{
+                padding: 2rem 1rem;
+            }
+        }
+        .footerBG{
+            .footer{
+                .container{
+                    padding: 2rem;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 3rem;
+                    grid-row-gap: 1rem;
+                    .footerLeftCenter, .footerRightCenter{
+                        h2{
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 13px;
+        .bookAnApointmentBG{
+            .bookAnApointment{
+                .container{
+                    .bookAnApTop{
+                        .bookTopLeft{
+                            width: 100%;
+                            align-items: center;
+                            input{
+                                width: 70%;
+                             }
+                        }  
+                        .bookTopRight{
+                            width: 100%;
+                            align-items: center;
+                            input{
+                                width: 70%;
+                             }
+                        }  
+                    }
+                    .bookAnApBottom{
+                        textarea{
+                            width: 70%; 
+                        }
+                    }
+                }
+            }
+        }
+        .ourDentists{
+            .container{
+                padding: 2rem 5rem;
+                .dentists{
+                    flex-direction: column;
+                } 
+            }
+        }
+    }
+}
+
+@media (max-width: 550px){
+    html{
+        font-size: 12px;
+        .ourServicesBG{
+            .container{
+                padding: 6rem;
+            }
+            .ourServices{
+                .ourServicesRight{
+                    .rightIcons{
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 3rem;
+                        place-items: center;
+                    }
+                }
+            }
+        }  
+        .pricing{
+            .container{
+                padding: 2rem 8px;
+            }
+        }
+        .footerBG{
+            .footer{
+                .container{
+                    padding: 2rem 5rem;
+                    grid-template-columns: 1fr;
+                    grid-gap: 2rem;
+                    .footerLeft{
+                        img{
+                            align-self: center;
+                        }
+                    }
+                    .footerLeftCenter, .footerRightCenter, .footerRight{
+                        gap: 4px;
+                        h2{
+                            text-align: center;
+                        }
+                    }
+                    .footerRight{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .ficons i{
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+    html{
+        .nav__bar{
+            padding: 1rem;
+        }
+        .aboutUs{
+            .container{
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}

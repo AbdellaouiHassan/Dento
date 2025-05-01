@@ -6,7 +6,7 @@
 }
 
 .nav__bar {
-  padding: 1rem 15rem;
+  padding: 2rem 15rem;
 }
 .nav__bar .links a {
   color: black;
@@ -15,7 +15,9 @@
   padding: 0 2rem;
 }
 .nav__bar .btn {
+  padding: 0.5rem 0.5rem;
   border-radius: 0;
+  font-size: clamp(10px, 0.8rem, 1.5vw);
   background-color: #00AEEF;
   border: 0;
   transition: 0.5s ease;
@@ -29,6 +31,7 @@
   background-image: url(/Dento/assets/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100dvw;
 }
 .background .hero {
   display: flex;
@@ -45,10 +48,10 @@
   color: white;
   width: 80%;
   justify-self: center;
-  font-size: 4rem;
+  font-size: clamp(16px, 4vw, 4rem);
 }
 .background .hero p {
-  margin-top: 1rem;
+  margin-top: clamp(10px, 1vw, 1rem);
   width: 70%;
   justify-self: center;
   color: #DBDDE3;
@@ -62,7 +65,7 @@
   padding: 0.5rem 2rem;
   border-radius: 0;
   background-color: #00AEEf;
-  font-size: 1rem;
+  font-size: clamp(8px, 1rem, 1.5vw);
   transition: 0.5s ease;
   margin-right: 1rem;
 }
@@ -75,7 +78,7 @@
   padding: 0.5rem 2rem;
   border-radius: 0;
   background-color: #00AEEf;
-  font-size: 1rem;
+  font-size: clamp(8px, 1rem, 1.5vw);
   transition: 0.5s ease;
   color: #05A2E0;
   background-color: transparent;
@@ -97,6 +100,8 @@
 }
 .aboutUs .container .aboutUsTop .topLeft img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .aboutUs .container .aboutUsTop .topRight {
   display: flex;
@@ -136,25 +141,32 @@
   background-color: gray;
 }
 .aboutUs .container .aboutUsBottom {
-  height: 30dvh;
+  margin-top: 2rem;
   align-items: center;
   gap: 7rem;
   justify-content: center;
   text-align: center;
 }
-.aboutUs .container .aboutUsBottom i {
+.aboutUs .container .aboutUsBottom div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutUs .container .aboutUsBottom div i {
   color: #00AEEF;
   background-color: white;
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  height: 3rem;
 }
-.aboutUs .container .aboutUsBottom h1 {
-  margin-bottom: 1rem;
+.aboutUs .container .aboutUsBottom div h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
   font-weight: 550;
 }
-.aboutUs .container .aboutUsBottom h4 {
-  font-size: 1rem;
-  font-weight: 550;
+.aboutUs .container .aboutUsBottom div h4 {
+  font-size: 1.5rem;
+  font-weight: 50;
 }
 
 .ourServicesBG {
@@ -191,16 +203,20 @@
   color: rgb(218, 214, 214);
   font-weight: 400;
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 .ourServicesBG .ourServices .ourServicesRight .rightIcons .icon {
   width: 10rem;
 }
 .ourServicesBG .ourServices .ourServicesRight .rightIcons .icon img {
-  margin-bottom: 0.5rem;
+  width: auto;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .ourServicesBG .ourServices .ourServicesLeft img {
-  width: 30rem;
-  height: 20rem;
+  max-width: 30rem;
+  max-height: 20rem;
 }
 
 .pricing .container {
@@ -248,7 +264,7 @@
   padding: 0.5rem 2rem;
   border-radius: 0;
   background-color: #00AEEf;
-  font-size: 1rem;
+  font-size: clamp(8px, 1rem, 1.5vw);
   transition: 0.5s ease;
   color: white;
   border: 0;
@@ -357,7 +373,7 @@
   padding: 0.5rem 2rem;
   border-radius: 0;
   background-color: #00AEEf;
-  font-size: 1rem;
+  font-size: clamp(8px, 1rem, 1.5vw);
   transition: 0.5s ease;
   margin-top: 2rem;
   border: 0;
@@ -434,7 +450,7 @@
 .footerBG .footer .container {
   padding: 5rem 10rem;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
 }
 .footerBG .footer .footerLeft {
   display: flex;
@@ -502,4 +518,202 @@
 .footerBG .footer .footerRight .leftIpt .icon i {
   color: white;
   font-size: 1rem;
+}
+
+@media (max-width: 1400px) {
+  .aboutUs .container {
+    padding: 5rem;
+  }
+  .ourDentists .container {
+    padding: 5rem;
+  }
+}
+@media (max-width: 1312px) {
+  html {
+    font-size: 15px;
+  }
+  html .nav__bar {
+    padding: 1rem 10rem;
+  }
+  html .nav__bar .links a {
+    font-size: 1rem;
+  }
+  .footerBG .footer .container {
+    padding: 2rem 5rem;
+  }
+}
+@media (max-width: 990px) {
+  html {
+    font-size: 14px;
+  }
+  html .nav__bar {
+    padding: 1rem 5rem;
+  }
+  html .nav__bar .links a {
+    font-size: 1rem;
+  }
+  html .aboutUs .container {
+    padding: 3rem 7rem;
+  }
+  html .aboutUs .container h1 {
+    text-align: center;
+  }
+  html .aboutUs .container hr {
+    align-self: center;
+  }
+  html .aboutUs .container .aboutUsTop {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 2rem;
+  }
+  html .aboutUs .container .aboutUsTop .topLeft {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html .aboutUs .container .aboutUsTop .topLeft img {
+    width: 80%;
+  }
+  html .aboutUs .container .aboutUsTop .topRight {
+    order: 1;
+    padding-top: 0;
+    justify-content: center;
+  }
+  html .aboutUs .container hr {
+    margin: 1rem;
+    width: 80%;
+    justify-self: center;
+  }
+  html .aboutUs .container .aboutUsBottom {
+    gap: 3rem;
+  }
+  html .aboutUs .container .aboutUsBottom div i {
+    font-size: 2.5rem;
+  }
+  html .aboutUs .container .aboutUsBottom div h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  html .aboutUs .container .aboutUsBottom div h4 {
+    font-size: 1rem;
+  }
+  html .ourServices .container {
+    flex-direction: column;
+    padding: 4rem 6rem;
+    gap: 4rem;
+  }
+  html .ourServices .container .ourServicesRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html .ourServices .container .ourServicesRight hr {
+    margin-bottom: 2rem;
+  }
+  html .ourServices .container .ourServicesLeft {
+    display: none;
+  }
+  html .pricing .container {
+    padding: 5rem;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop {
+    flex-direction: column;
+    align-items: center;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopLeft input {
+    width: 40rem;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopRight input {
+    width: 40rem;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApBottom textarea {
+    width: 40rem;
+  }
+  html .ourDentists .container {
+    padding: 2rem 1rem;
+  }
+  html .footerBG .footer .container {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 1rem;
+  }
+  html .footerBG .footer .container .footerLeftCenter h2, html .footerBG .footer .container .footerRightCenter h2 {
+    text-align: start;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopLeft {
+    width: 100%;
+    align-items: center;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopLeft input {
+    width: 70%;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopRight {
+    width: 100%;
+    align-items: center;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopRight input {
+    width: 70%;
+  }
+  html .bookAnApointmentBG .bookAnApointment .container .bookAnApBottom textarea {
+    width: 70%;
+  }
+  html .ourDentists .container {
+    padding: 2rem 5rem;
+  }
+  html .ourDentists .container .dentists {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 12px;
+  }
+  html .ourServicesBG .container {
+    padding: 6rem;
+  }
+  html .ourServicesBG .ourServices .ourServicesRight .rightIcons {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    place-items: center;
+  }
+  html .pricing .container {
+    padding: 2rem 8px;
+  }
+  html .footerBG .footer .container {
+    padding: 2rem 5rem;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  html .footerBG .footer .container .footerLeft img {
+    align-self: center;
+  }
+  html .footerBG .footer .container .footerLeftCenter, html .footerBG .footer .container .footerRightCenter, html .footerBG .footer .container .footerRight {
+    gap: 4px;
+  }
+  html .footerBG .footer .container .footerLeftCenter h2, html .footerBG .footer .container .footerRightCenter h2, html .footerBG .footer .container .footerRight h2 {
+    text-align: center;
+  }
+  html .footerBG .footer .container .footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html .footerBG .footer .container .footerRight .ficons i {
+    margin-left: 8px;
+  }
+}
+@media (max-width: 425px) {
+  html .nav__bar {
+    padding: 1rem;
+  }
+  html .aboutUs .container {
+    padding: 1rem 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
