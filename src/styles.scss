@@ -29,7 +29,7 @@
         color: black;
         font-size: 1.3rem;
         font-weight: 400;
-        padding: 0 2rem ;
+        margin-left: 1rem;
     }
     .btn{
     padding: 0.5rem 0.5rem;
@@ -558,10 +558,10 @@
     html{
         font-size: 15px;
         .nav__bar{
-            padding: 1rem 10rem;
+            padding: 1rem 8rem;
             .links a {
                 font-size: 1rem;
-
+                margin-left: 0.5rem;
             }
         }
     } 
@@ -579,9 +579,29 @@
         font-size: 14px;
         .nav__bar{
             padding: 1rem 5rem;
+            .links{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
             .links a {
+                margin-left: 4rem;
+                font-size: 2rem;
+            }
+            div button{
+                margin-left: 4rem;
                 font-size: 1rem;
-
+                padding: 0.4rem 1rem;
+            }
+        }
+        .background{
+            .container{
+                padding: 2rem 0;
+            }
+            .hero{
+                line-height: 2;
+                h1 p {
+                    width: 100%;
+                }
             }
         }
         .aboutUs .container{
@@ -645,7 +665,6 @@
                         margin-bottom: 2rem;
                     }
                 }
-                
                 .ourServicesLeft{
                     display: none;
                 }
@@ -708,6 +727,17 @@
 @media (max-width: 768px){
     html{
         font-size: 13px;
+        .background{
+            .container{
+                padding: 0 3rem;
+            }
+            .hero{
+                line-height: 2;
+                h1 p {
+                    width: 100%;
+                }
+            }
+        }
         .bookAnApointmentBG{
             .bookAnApointment{
                 .container{

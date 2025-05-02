@@ -12,7 +12,7 @@
   color: black;
   font-size: 1.3rem;
   font-weight: 400;
-  padding: 0 2rem;
+  margin-left: 1rem;
 }
 .nav__bar .btn {
   padding: 0.5rem 0.5rem;
@@ -533,10 +533,11 @@
     font-size: 15px;
   }
   html .nav__bar {
-    padding: 1rem 10rem;
+    padding: 1rem 8rem;
   }
   html .nav__bar .links a {
     font-size: 1rem;
+    margin-left: 0.5rem;
   }
   .footerBG .footer .container {
     padding: 2rem 5rem;
@@ -549,8 +550,27 @@
   html .nav__bar {
     padding: 1rem 5rem;
   }
+  html .nav__bar .links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   html .nav__bar .links a {
+    margin-left: 4rem;
+    font-size: 2rem;
+  }
+  html .nav__bar div button {
+    margin-left: 4rem;
     font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  html .background .container {
+    padding: 2rem 0;
+  }
+  html .background .hero {
+    line-height: 2;
+  }
+  html .background .hero h1 p {
+    width: 100%;
   }
   html .aboutUs .container {
     padding: 3rem 7rem;
@@ -646,6 +666,15 @@
 @media (max-width: 768px) {
   html {
     font-size: 13px;
+  }
+  html .background .container {
+    padding: 0 3rem;
+  }
+  html .background .hero {
+    line-height: 2;
+  }
+  html .background .hero h1 p {
+    width: 100%;
   }
   html .bookAnApointmentBG .bookAnApointment .container .bookAnApTop .bookTopLeft {
     width: 100%;
