@@ -28,7 +28,7 @@
 }
 
 .background {
-  background-image: url(/Dento/assets/images/bg.jpg);
+  background-image: url(../assets/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100dvw;
@@ -170,7 +170,7 @@
 }
 
 .ourServicesBG {
-  background: url(/Dento/assets/images/osbg.jpg) no-repeat;
+  background: url(../assets/images/osbg.jpg) no-repeat;
   background-size: cover;
 }
 .ourServicesBG .container {
@@ -275,7 +275,7 @@
 }
 
 .bookAnApointmentBG {
-  background: url(/Dento/assets/images/babg.jpg) no-repeat;
+  background: url(../assets/images/babg.jpg) no-repeat;
   background-size: cover;
 }
 .bookAnApointmentBG .bookAnApointment {
@@ -431,7 +431,7 @@
 }
 
 .footerBG {
-  background: url(/Dento/assets/images/footerbg.jpg) no-repeat center;
+  background: url(../assets/images/footerbg.jpg) no-repeat center;
   background-size: cover;
 }
 .footerBG .footer {
